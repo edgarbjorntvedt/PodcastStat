@@ -11,7 +11,7 @@ module.exports = function(ioc, app){
     /** @let {FeedRoute}  */
     let feedRoute = ioc['FeedRoute']
 
-    app.get('/feed',
+    app.get('/podcasts/:podcastId/feed',
         route(feedRoute.getFeed.bind(feedRoute)))
 
     app.get('/hello',

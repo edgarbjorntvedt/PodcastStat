@@ -28,9 +28,12 @@ module.exports = ioc => {
             },
             PODCAST_FEED: {
                 host:     env.string('PODCAST_FEED_HOST', 'PODCAST_FEED.com'),
-                path:     env.string('PODCAST_FEED_PATH', '/podcast/feed.xml'),
+                path:     env.string('PODCAST_FEED_PATH', '/feed.xml'),
                 protocol: env.string('PODCAST_FEED_PROTOCOL', 'http:'),
                 port:     env.int('PODCAST_FEED_PORT', 80)
+            },
+            PODCASTSTATCOUNTER: {
+                tableName: env.string('tableName')
             }
         }
     })

@@ -11,12 +11,12 @@ class FeedRepo{
         this._apiPort = config.port
     }
 
-    getFeed(){
+    getFeed(podcastId){
         return this._api.doRequest({
             protocol: this._apiProtocol,
             hostname: this._apiHost,
             port: this._apiPort,
-            path: this._apiPath,
+            path: '/' + podcastId + this._apiPath,
             method: 'GET'
         },
         {
