@@ -33,7 +33,13 @@ module.exports = ioc => {
                 port:     env.int('PODCAST_FEED_PORT', 80)
             },
             PODCASTSTATCOUNTER: {
-                tableName: env.string('tableName')
+                tableName: env.string('tableName', '')
+            },
+            DAYLIGHT_API: {
+                host:     env.string('DAYLIGHT_HOST', 'api.sunrise-sunset.org'),
+                path:     env.string('DAYLIGHT_PATH', '/json'),
+                protocol: env.string('DAYLIGHT_PROTOCOL', 'https:'),
+                port:     env.int('DAYLIGHT_PORT', 80)
             }
         }
     })

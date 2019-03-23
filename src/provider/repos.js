@@ -7,4 +7,8 @@ module.exports = (ioc) => {
         const PodcastStatCounterRepo = require('../repo/PodcastStatCounterRepo')
         return new PodcastStatCounterRepo(ioc['DynamoDb'], ioc['CONFIG']['PODCASTSTATCOUNTER'])
     })
+    ioc.service('DaylightRepo', ioc => {
+        const DaylightRepo = require('../repo/DaylightRepo')
+        return new DaylightRepo(ioc['ApiRequestFactory'], ioc['CONFIG']['DAYLIGHT_API'])
+    })
 }

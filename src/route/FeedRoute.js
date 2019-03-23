@@ -20,8 +20,18 @@ class FeedRoute{
             .send(feed)
     }
 
+    async incCount(req, res){
+        let podcastId = req.params.podcastId
+
+        await this._podcastStatCounterRepo.incCounter(podcastId)
+
+        res
+            .type('application/xml')
+            .send('OK')
+    }
+
     async hello(req, res){
-        res.send('Hello Feed!')
+        res.send('Hello Edgar!')
     }
 }
 
