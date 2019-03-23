@@ -10,10 +10,15 @@ const route = require('./util/promiseRoute')
 module.exports = function(ioc, app){
     /** @let {FeedRoute}  */
     let feedRoute = ioc['FeedRoute']
+    /** @let {MathRoute}  */
+    let mathRoute = ioc['MathRoute']
 
     app.get('/podcasts/:podcastId/feed',
         route(feedRoute.getFeed.bind(feedRoute)))
 
     app.get('/hello',
         route(feedRoute.hello.bind(feedRoute)))
+
+    app.get('/calculate',
+        route(mathRoute.calculate.bind(mathRoute)))
 }

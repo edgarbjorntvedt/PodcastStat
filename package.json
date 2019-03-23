@@ -31,6 +31,7 @@
     "getenv": "0.7.0",
     "js-yaml": "3.12.0",
     "lodash": "4.17.10",
+    "mathjs": "5.8.0",
     "moment": "2.22.2",
     "njs-tfso-app": "github:tfso/njs-tfso-app#1.0.0",
     "njs-tfso-express": "github:tfso/njs-tfso-express#1.5.0",
